@@ -8,7 +8,7 @@
 module load ncbi-blast+/2.2.30
 module load MUMmer/3.23
 
-#(for i in fasta/*.fasta; do refname=$(basename $i .fasta); jobname=${refname}; qsub -o DIFF/$jobname.out -N dnadiffM$jobname /scicomp/home/hze1/bin/launch_dnadiff-m_MT.sh DIFF/$jobname.tsv $i fasta/*.fasta; done;)
+#(for i in fasta/*.fasta; do refname=$(basename $i .fasta); jobname=${refname}; qsub -o DIFF/$jobname.out -N dnadiffM$jobname ~/bin/launch_dnadiff-m_MT.sh DIFF/$jobname.tsv $i fasta/*.fasta; done;)
 # Usage: dnadiff-m_MT.pl <reference> <query>
 OUT=$1
 REF=$2
